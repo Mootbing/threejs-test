@@ -69,6 +69,10 @@ function App() {
         <SpinningBox position={[0, 1, 2]} args={[3, 2, 1]} speed={3} color="lightblue"/>
         <SpinningBox position={[2, 4, 1]} args={[3, 2, 1]} speed={2}  color="pink"/>
         <SpinningBox position={[4, 3, 5]} args={[3, 2, 1]} speed={6}  color="orange"/>
+
+        <Suspense>
+          <Model position={[0, -1, 0]}/>
+        </Suspense>
         
 
         <OrbitControls />
