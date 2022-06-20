@@ -24,10 +24,12 @@ main {
     
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-  }
+}
 
-/* .canvas-frame {
-    position: fixed;
-    top: 0;
-    left: 0;
-} */
+.scroll-elements-text {
+    padding-bottom: 750px;
+}
+
+.scroll-elements-text-start {
+    padding-top: 700px;
+}

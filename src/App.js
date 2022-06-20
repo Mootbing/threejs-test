@@ -31,15 +31,20 @@ function App() {
   const [lastScrollPosition, setLastScrollPosition] = useState(0);
 
   const perFrame = (ref, callback) => {
-    const pendingPos = ((scrollPosition * 0.01)) % 6;
-    ref.current.scale.z = ref.current.scale.x = ref.current.scale.y = (pendingPos <= 3 ? pendingPos : 3 - (pendingPos - 3));
+    const div = 10;
+    const lmt = 3;
+    let pendingPos = ((scrollPosition * 0.01)) % div;
+    pendingPos = (pendingPos <= (div / 2) ? pendingPos : (div / 2) - (pendingPos - (div / 2)));
+    pendingPos = (pendingPos < lmt ? pendingPos : lmt);
 
-    if (Math.abs(lastScrollPosition - pendingPos) > 1)
+    ref.current.scale.z = ref.current.scale.x = ref.current.scale.y = pendingPos;
+
+    if (Math.floor((lastScrollPosition * 0.01) / div) !== Math.floor((scrollPosition * 0.01) / div))
     {
-      callback(lastScrollPosition, pendingPos);
+      callback(lastScrollPosition, scrollPosition);
     }
 
-    setLastScrollPosition(pendingPos);
+    setLastScrollPosition(scrollPosition);
   }
 
   return (
@@ -79,38 +84,12 @@ function App() {
       <main>
         <div class="text-over">
           <p style={{fontSize: "100px"}}>
-            <br />
-            Jason
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            Larry
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            Agni
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            Sushant
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            Ruoyu
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <p class="scroll-elements-text-start">.</p>
+            <p class="scroll-elements-text">Jason</p>
+            <p class="scroll-elements-text">Larry</p>
+            <p class="scroll-elements-text">Agni</p>
+            <p class="scroll-elements-text">Sushant</p>
+            <p class="scroll-elements-text">Ruoyu</p>
           </p>
         </div>
       </main>

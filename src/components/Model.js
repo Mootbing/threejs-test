@@ -40,7 +40,7 @@ export default function Model({callback}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const onExpand = (oldPos, newPos) => {
 
-    const reverser = (oldPos > newPos ? 1: -1); //going forwards if true, else backwards
+    const reverser = (oldPos > newPos ? -1: 1); //going forwards if true, else backwards
 
     setCurrentIndex(currentIndex + reverser);
     console.log("new location" + (currentIndex + reverser));
