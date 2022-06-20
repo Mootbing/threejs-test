@@ -84,8 +84,7 @@ function App() {
       <main>
         <div class="text-over">
           <p style={{fontSize: "100px"}}>
-            <p class="scroll-elements-text-start">.</p>
-            <p class="scroll-elements-text">Jason</p>
+            <p class="scroll-elements-text-start scroll-elements-text">Jason</p>
             <p class="scroll-elements-text">Larry</p>
             <p class="scroll-elements-text">Agni</p>
             <p class="scroll-elements-text">Sushant</p>
