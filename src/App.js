@@ -8,7 +8,7 @@ import { OrbitControls } from "drei/OrbitControls";
 
 import Model from './components/Model';
 
-softShadows();
+// softShadows();
 
 function App() {
 
@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="App" style={{width: "100%", height: "100%", position: "absolute"}}>
       <Canvas className="canvas-frame" shadows camera={{position: [-5, 2, 10], fov: 40}} style={{top: "0", left: "0", position: "fixed"}}>
-        <ambientLight intensity={0.3}></ambientLight>
+        <ambientLight intensity={1}></ambientLight>
         <directionalLight
           castShadow
           position={[0, 10, 0]}
@@ -61,6 +61,7 @@ function App() {
           shadow-camera-bottom={10}
         />
         <pointLight position={[10, 0, 20]} intensity={1.5}/>
+        <pointLight position={[-10, 0, -20]} intensity={1.5}/>
 
         <group>
           <mesh receiveShadow rotation={[-Math.PI/2, 0, 0]} position={[0, -1, 0]}>
@@ -72,6 +73,7 @@ function App() {
         <Suspense>
           <Model callback={perFrame}/>
         </Suspense>
+        <OrbitControls enableZoom={false} enablePan={false} />
       </Canvas>
 
       <main>
@@ -97,6 +99,12 @@ function App() {
             <br />
             <br />
             Sushant
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            Ruoyu
             <br />
             <br />
             <br />

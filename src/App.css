@@ -1,5 +1,6 @@
 .text-over {
     width: 100vw;
+    pointer-events: none;
     color: black;
     z-index: 99;
     position: absolute;
@@ -13,6 +14,7 @@
 
 main {
     width: 100vw;
+    pointer-events: none;
     color: white;
     z-index: 99;
     position: absolute;
