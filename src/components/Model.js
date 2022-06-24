@@ -96,5 +96,3 @@ export default function Model({callback}) {
     </Suspense>
   );
 }
-
-useGLTF.preload("/Flower.gltf");

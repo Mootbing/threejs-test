@@ -12,8 +12,6 @@ import Model from './components/Model';
 
 function App() {
 
-  let currentY = 0;
-
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
